@@ -2,7 +2,7 @@ import fs from 'fs'
 import g from 'gm'
 const gm = g.subClass({imageMagick: true})
 
-const files = fs.readdirSync('.').filter(x => x.endsWith('jpg'))
+const files = fs.readdirSync('.').filter(x => x.endsWith('jpg') || x.endsWith('png') || x.endsWith('jpeg'))
 
 function getSize(file) {
     return new Promise((resolve) => {
